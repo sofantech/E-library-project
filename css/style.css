@@ -56,6 +56,15 @@ a
 {
     font-size: 1.4rem;
     color: var(--link-color);
+    cursor: pointer;
+}
+.btn
+{
+    padding: 0.5rem 1rem;
+    border-radius: .5rem;
+    background: #efefef;
+    color: var(--icon-color);
+    margin: 1rem 0;
 }
 
 /*############ start header ##############*/
@@ -168,8 +177,58 @@ a
 
 
 
+/*############ start footer ##############*/
+.footer
+{
+    padding: 2rem;
+    background: var(--icon-color);
+}
+.footer h3
+{
+    color: var(--input-color);
+    border-bottom: 0.1rem solid var(--link-color);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.footer .footer-boxs
+{
+    display: flex;
+    justify-content: space-between;
+    margin:0 2.5rem;
+    
+}
+.footer .footer-boxs .box
+{
+    display: flex;
+    flex-direction: column;
+}
+.footer .frm-container
+{
+    background: #3f3f3f;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+.footer .frm-container form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+}
+.footer form .input-email
+{
+    background: white;
+    padding: .5rem 1.5rem;
+    border-radius: 0.5rem;
+}
+.footer .footer-boxs .box a
+{
+    color: #ada898;
+    font-size: 1.2rem;
+}
 
-
+/*############ end footer ##############*/
 
 
 /* ######### media query ###################*/
