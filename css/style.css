@@ -35,8 +35,9 @@ body
 }
 .container
 {
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     margin: 0 auto;
+    
 }
 ul
 {
@@ -80,28 +81,28 @@ a
     width: 100%;
     border-bottom: 0.05rem solid #2424242a;
 }
-.header .top-header .top-header-wrapper ul
+.header .top-header ul
 {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.header .top-header .top-header-wrapper ul li
+.header .top-header ul li
 {
     position: relative;
 
 }
-.header .top-header .top-header-wrapper ul li .languages i
+.header .top-header ul li .languages i
 {
     order: 2;
 
 }
-.header .top-header .top-header-wrapper ul li .languages .language
+.header .top-header ul li .languages .language
 {
     order: 1;
 
 }
-.header .top-header .top-header-wrapper ul li:not(:first-of-type):before
+.header .top-header ul li:not(:first-of-type):before
 {
     content: "";
     position: absolute;
@@ -110,11 +111,11 @@ a
     background: #2424242a;
 
 }
-.header .top-header .top-header-wrapper ul li div
+.header .top-header ul li div
 {
     padding: 1rem;
 }
-.header .top-header .top-header-wrapper .nav-item
+.header .top-header .nav-item
 {
     display: inline-flex;
     align-items: center;
@@ -132,6 +133,12 @@ a
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 1rem;
+}
+.header .main-header .togle-menu i
+{
+    font-size: 2.5rem;
+    display: none;
 }
 .header .main-header .logo
 {
@@ -139,14 +146,14 @@ a
 }
 .header .main-header .search-frm
 {
-    flex: 0 0 70%;
+    flex: 1 1 70%;
 }
 .header .main-header .search-frm input
 {
     background: var(--input-bk);
     width: 100%;
     border-radius: 5rem;
-    padding: .5rem;
+    padding: 1.5rem;
 }
 .header .main-header .search-frm input::placeholder
 {
@@ -170,7 +177,56 @@ a
 
 
 
+/*start home section*/
+.home .home-slider .slide
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 9rem;
+}
+.home .home-slider .slide .content
+{
+    display: flex;
+    flex-direction: column;
+    flex:1 1 45rem;
+    letter-spacing: -0.8px;
+}
+.home .home-slider .slide .image
+{
+    flex: 1 1 45rem;
+}
+.home .home-slider .slide .image img
+{
+    width: 100%;
+}
 
+.home .home-slider .slide .content h3
+{
+    color: #092c77cb;
+    font-size: 7rem;
+    text-align: center;
+}
+.home .home-slider .slide .content p
+{
+    color: black;
+    font-size: 2.2rem;
+    padding: .5rem 0;
+    line-height: 1.5;
+    text-align: center;
+}
+.home .home-slider .slide .content a
+{
+
+    margin: 1rem auto;
+}
+.swiper-pagination-bullet-active
+{
+    background: var(--green);
+}
+
+/*end home section*/
 
 
 
@@ -180,7 +236,7 @@ a
 /*############ start footer ##############*/
 .footer
 {
-    padding: 2rem;
+    padding: 2rem 0;
     background: var(--icon-color);
 }
 .footer h3
@@ -194,14 +250,10 @@ a
 {
     display: flex;
     justify-content: space-between;
-    margin:0 2.5rem;
+    flex-wrap: wrap;
     
 }
-.footer .footer-boxs .box
-{
-    display: flex;
-    flex-direction: column;
-}
+
 .footer .frm-container
 {
     background: #3f3f3f;
@@ -222,6 +274,11 @@ a
     padding: .5rem 1.5rem;
     border-radius: 0.5rem;
 }
+.footer .footer-boxs .box
+{
+    display: flex;
+    flex-direction: column;
+}
 .footer .footer-boxs .box a
 {
     color: #ada898;
@@ -232,29 +289,60 @@ a
 
 
 /* ######### media query ###################*/
-@media(max-width:567px)
+/* @media(max-width:567px)
 {
     .container
     {
         width: 567px;
     }
-}
-@media(min-width:567px)
+} */
+@media(max-width:576px)
 {
+    html
+    {
+        font-size: 50%;
+    }
     .container
     {
-        width: 540px;
+       
     }
+    .header .top-header
+    {
+        display: none;
+    }
+    .header .main-header .togle-menu i
+    {
+        display: inline-block;
+    }
+    .footer .footer-boxs
+    {
+        flex-direction: column;
+    }
+    .footer .footer-boxs .box a
+    {
+        display: none;
+    }
+    .footer .footer-boxs .social-media a
+    {
+        display: inline-block;
+    }
+    
 }
 @media(min-width:768px)
 {
+  
     .container
     {
         width: 720px;
     }
+  
+    
+    
 }
+
 @media(min-width:992px)
 {
+    
     .container
     {
         width: 960px;
