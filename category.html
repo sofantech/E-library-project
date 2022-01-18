@@ -24,9 +24,9 @@
                     <li>
                         <div class="regester-op nav-item" href="#">
                             <i class="ri-user-fill"></i>
-                            <a class="create-acount" href="">ادخل لحسابك</a>
+                            <a class="login" id="login" href="#">ادخل لحسابك</a>
                             <span class="separator">أو</span>
-                            <a class="login" href="">سجل الان</a>
+                            <a class="create-acount" id="signin" href="#">سجل الان</a>
     
                         </div>
                     </li>
@@ -100,61 +100,158 @@
         
     </header>
     <!--end header-->
-
-    <!--start home section-->
-    <section class="home container" id="home">
-        <div class="swiper home-slider">
-            <div class="swiper-wrapper wrapper">
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <h3>نشرة العروض الترويجية </h3>
-                        <a href="#" class="btn">للإطلاع</a>
-                        <p> يسري هذا العرض من 29 نوفمبر حتى 8 ديسمبر 2021</p>
-                    </div>
-                    <div class="image">
-                        <img src="images/AdobeStock_45358513_Preview.png" id="imgone" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <h3>نشرة العروض الترويجية </h3>
-                        <a href="#" class="btn">للإطلاع</a>
-                        <p> يسري هذا العرض من 29 نوفمبر حتى 8 ديسمبر 2021</p>
-                    </div>
-                    <div class="image">
-                        <img src="images/AdobeStock_216540976_Preview.png" id="imgone" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <h3>نشرة العروض الترويجية </h3>
-                        <a href="#" class="btn">للإطلاع</a>
-                        <p> يسري هذا العرض من 29 نوفمبر حتى 8 ديسمبر 2021</p>
-                    </div>
-                    <div class="image">
-                        <img src="images/AdobeStock_153325055_Preview (1).png" id="imgone" alt="">
-                    </div>
-                </div>
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <h3>نشرة العروض الترويجية </h3>
-                        <a href="#" class="btn">للإطلاع</a>
-                        <p> يسري هذا العرض من 29 نوفمبر حتى 8 ديسمبر 2021</p>
-                    </div>
-                    <div class="image">
-                        <img src="images/AdobeStock_175260252_Preview.png" id="imgone" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
+    <!--start modal login-->
+    <div class="modal-login" id="modal-login">
+        <div class="close-btn" id="close-btn">
+            <i class="ri-close-line"></i>
         </div>
+        <div class="modal-content">
+            <h2>تسجيل الدخول</h2>
+            <form>
+                <div class="email-input">
+                    <input type="email" placeholder="البريد الإلكتروني او رقم الجوال">
+                </div>
+                <div class="password-input">
+                    <input type="password" placeholder="كلمة السر">
+                </div>
+                <input type="submit" value="تسجيل الدخول">
+                <a class="sure-msg">ليس لديك حساب ؟</a>
+                <button class="create-acount" >انشاء حساب جديد</button>
+            </form>
+        </div>
+    </div>
+    <!--end modal login-->
 
-    </section>
-    <!--end home section-->
+    <!--start modal signin-->
+    <div class="modal-signin" id="modal-signin">
+        <div class="close-signin-btn" id="close-signin-btn">
+            <i class="ri-close-line"></i>
+        </div>
+        <div class="modal-content">
+            <h2> إنشاء حساب</h2>
+            <form>
+                <div class="number-input">
+                    <input type="number" placeholder="لاقم الجوال">
+                    <div class="country-code">
+                        <label >رمز البلد</label>
+                        <select>
+                            <option>+967</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <span class="info-send">سوف نرسل لك رمز تحقق عن طريق رسالة نصية</span>
+                <div class="send-btn">
+                    <input type="submit" value="ارسال رمز التحقق">
+                </div>
+                <div class="first-name-input">
+                    <input type="text" placeholder="الاسم الاول">
+                </div>
+                <div class="family-name-input">
+                    <input type="text" placeholder="اسم العائلة">
+                </div>
+                <div class="email-input">
+                    <input type="email" placeholder="البريد الالكتروني ">
+                </div>
+                <div class="sure-email-input">
+                    <input type="email" placeholder="تاكيد البريد الالكتروني ">
+                </div>
+                <div class="password-input">
+                    <input type="password" placeholder="كلمة السر">
+                </div>
+                <div class="checkbox-sure">
+                    <input type="checkbox">
+                    <label>اوافق على </label>
+                    <a>على الشروط والاحكام</a>
+                </div>
+                <div class="checkbox-regester">
+                    <input type="checkbox">
+                    <label>اوافق على </label>
+                    <a>على الشروط والاحكام</a>
+                </div>
+                <input type="submit" value="إنشاء حساب">
+                <label>هل لديك حساب ؟ <a>تسجيل الدخول</a></label>
+            </form>
+        </div>
+    </div>
+    <!--end modal signin-->
+    
+
+    <!--start slider section-->
+    <div class="slider container">
+        <ul>
+            <li>
+                <img src="images/slide-one.png">
+                <div class="content">
+                    <h2>نشرة العروض الترويجية</h2>
+                    <a class="btn">للإطلاع</a>
+                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/slide-two.png">
+                <div class="content">
+                    <h2>نشرة العروض الترويجية</h2>
+                    <a class="btn">للإطلاع</a>
+                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/slide-three.png">
+                <div class="content">
+                    <h2>نشرة العروض الترويجية</h2>
+                    <a class="btn">للإطلاع</a>
+                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/slid-foure.png">
+                <div class="content">
+                    <h2>نشرة العروض الترويجية</h2>
+                    <a class="btn">للإطلاع</a>
+                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
+                </div>
+            </li>
+            <li>
+                <img src="images/slide-two.png">
+                <div class="content">
+                    <h2>نشرة العروض الترويجية</h2>
+                    <a class="btn">للإطلاع</a>
+                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!--end slider section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section class="category">
-        <div class="container">
-            <aside class="">
+        <div class="container category-cont">
+            <aside class="filter">
                 <ul>
                     <li>
                         <a>الرئيسية</a>
@@ -169,13 +266,16 @@
                     </li>
                     <span>/</span>
                 </ul>
-                <a><i class="ri-book-read-line"></i>كتب إليكترونية</a>
+                <a class="filter-cho btn"><i class="ri-book-read-line"></i>كتب إليكترونية</a>
                 <div class="filter-box">
+                    <h3 class="filter-box-header">
+                        تصفية النتائج
+                    </h3>
                     <div class="parent-tab">
                         <label>
                             <span>علامة تجارية</span>
                             <div class="icon">
-                                <i class="ri-radio-button-line"></i>
+                                <i class="ri-add-circle-fill" id="show-info"></i>
                             </div>
                             
                         </label>
@@ -187,7 +287,7 @@
                         <label>
                             <span>السعر</span>
                             <div class="icon">
-                                <i class="ri-radio-button-line"></i>
+                                <i class="ri-add-circle-fill" id="show-info"></i>
                             </div>
                             
                         </label>
@@ -199,7 +299,7 @@
                         <label>
                             <span>صيغة الكتاب</span>
                             <div class="icon">
-                                <i class="ri-radio-button-line"></i>
+                                <i class="ri-add-circle-fill" id="show-info"></i>
                             </div>
                             
                         </label>
@@ -210,7 +310,185 @@
                 </div>
 
             </aside>
-            <div class="content">
+            <div class="order-product">
+                <div class="order-criteria">
+                    <label>الترتيب بحسب :</label>
+                    <select>
+                        <option>الاسم</option>
+                        <option>المؤلف</option>
+                        <option>عدد مرات التحميل</option>
+                    </select>
+                </div>
+                <div class="box-wrapper">
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/pic01.jpg">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">49.9 رس</span>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/pic02.jpg">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">49.9 رس</span>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/pic03.jpg">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <div class="price">49.9 رس</div>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/pic02.jpg">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">49.9 رس</span>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/pic03.jpg">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">49.9 رس</span>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/pic01.jpg">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">49.9 رس</span>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/pic02.jpg">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">49.9 رس</span>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </div>
@@ -292,10 +570,8 @@
         </div>
     </footer>
     <!--end footer-->
-
     <script src="js/script.js">
 
     </script>
-    
 </body>
 </html>

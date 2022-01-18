@@ -173,61 +173,485 @@ a
 {
     
 }
-/*############ end header ##############*/
+/* start login modale*/
 
-
-
-/*start home section*/
-.home .home-slider .slide
+.modal-login,
+.modal-content
 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-    padding-top: 9rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
 }
-.home .home-slider .slide .content
+.modal-login
 {
-    display: flex;
-    flex-direction: column;
-    flex:1 1 45rem;
-    letter-spacing: -0.8px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: none;
 }
-.home .home-slider .slide .image
+.modal-login.active
 {
-    flex: 1 1 45rem;
+    display: block;
 }
-.home .home-slider .slide .image img
+.modal-content
+{
+    width: 400px;
+    height: 350px;
+    padding: 1.8rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.3);
+}
+.modal-content h2
+{
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 0.05rem solid #22222229;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.modal-content form
 {
     width: 100%;
 }
+.modal-content form .email-input,
+.modal-content form .password-input
+{
+    margin-bottom: 1rem;
+    background: #eee;
 
-.home .home-slider .slide .content h3
-{
-    color: #092c77cb;
-    font-size: 7rem;
-    text-align: center;
 }
-.home .home-slider .slide .content p
+.modal-content form .email-input input,
+.modal-content form .password-input input
 {
-    color: black;
-    font-size: 2.2rem;
-    padding: .5rem 0;
-    line-height: 1.5;
-    text-align: center;
-}
-.home .home-slider .slide .content a
-{
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
 
+}
+.modal-content form input[type="submit"]
+{
+    width: 100%;
+    background: red;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+
+}
+.modal-content form .sure-msg
+{
+   display: block;
+   text-align: center;
+   margin: 0.5rem 0;
+}
+.modal-content .create-acount
+{
+    text-align: center;
+    padding: 1.5rem 4.5rem;
+    border-radius: 0.5rem;
+    display: block;
     margin: 1rem auto;
+    background: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
 }
-.swiper-pagination-bullet-active
+.close-btn
 {
-    background: var(--green);
+    position: relative;
+    right: 15%;
+    top: 20%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+.close-btn i
+{
+    font-size: 2.2rem;
+
+}
+/* end login modale*/
+
+
+/* start signin modale*/
+
+.modal-signin,
+.modal-content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+}
+.modal-signin
+{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: none;
+}
+.modal-signin.active
+{
+    display: block;
+}
+.modal-content
+{
+    width: 380px;
+    height: 630px;
+    padding: 1.8rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.3);
+}
+.modal-content h2
+{
+    text-align: center;
+    font-size: 2rem;
+    border-bottom: 0.05rem solid #22222229;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.modal-content form
+{
+    width: 100%;
+}
+.modal-content .number-input
+{
+    display: flex;
+    justify-content: space-between;
+    
+
+
+}
+.modal-content .number-input input
+{
+    width: 70%;
+    background: #eee;
+    padding: 0 .5rem;
+    border-radius: 0.5rem;
+}
+.modal-content .number-input .number
+{
+  
+}
+.modal-content .number-input .country-code
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+
+}
+.modal-content form .info-send
+{
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.modal-content .number-input .country-code select
+{
+    background: transparent;
+}
+.modal-content form .first-name-input,
+.modal-content form .family-name-input,
+.modal-content form .email-input,
+.modal-content form .sure-email-input,
+.modal-content form .password-input
+{
+    margin-bottom:0.5rem ;
+    background: #eee;
+
+}
+.modal-content form .first-name-input input,
+.modal-content form .family-name-input input,
+.modal-content form .email-input input,
+.modal-content form .sure-email-input input,
+.modal-content form .password-input input
+{
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+
+}
+.modal-content form input[type="submit"]
+{
+    width: 100%;
+    background: #eee;
+    color: rgba(34, 34, 34, 0.664);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+
+
+}
+.modal-content form input[type="submit"]:hover
+{
+    background: rgba(37, 84, 146, 0.788);
+    color: #fff;
+    cursor: pointer;
+}
+form .checkbox-sure
+{
+    display: flex;
+    align-items: center;
+}
+.modal-content form .sure-msg
+{
+   display: block;
+   text-align: center;
+   margin: 0.5rem 0;
+}
+.modal-content .create-acount
+{
+    text-align: center;
+    padding: 1.5rem 4.5rem;
+    border-radius: 0.5rem;
+    display: block;
+    margin: 1rem auto;
+    background: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.close-signin-btn
+{
+    position: relative;
+    right: 10%;
+    top: 5%;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+.close-signin-btn i
+{
+    font-size: 2.2rem;
+
+}
+/* end signin modale*/
+/*############ end header ##############*/
+
+/*############ start slider ##############*/
+.slider
+{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 1.5rem 0;
+}
+.slider ul
+{
+    padding: 0;
+    width: 400%;
+    position: relative;
+    animation: slidin 10s ease-in-out infinite;
+}
+.slider ul:hover
+{
+    animation-play-state: paused;
+
+}
+.slider ul li
+{
+    float: left;
+    position: relative;
+}
+.slider h5
+{
+    background: #2b2b2b;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #eee;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+@keyframes slidin
+{
+    5%,10%
+    {
+        right: 0;
+    }
+    15%,30%
+    {
+        right: -100%;
+    }
+    35%,50%
+    {
+        right: -200%;
+    }
+    55%,70%
+    {
+        right: -300%;
+    }
+    75%,90%
+    {
+        right: -400%;
+    }
 }
 
-/*end home section*/
+/*############ end slider ##############*/
 
+
+/*############ start category section ##############*/
+.category
+{
+    padding: 2rem 0;
+
+}
+.category .category-cont
+{
+    display: flex;
+    column-gap: 5%;
+
+}
+.category .filter
+{
+    flex: 1;
+
+}
+.category .filter ul
+{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+} 
+.category .filter ul li a
+{
+    color: rgb(80, 80, 235);
+}
+.category .category-cont .content
+{
+    flex: 0 0 60%;
+}
+.filter .filter-cho
+{
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    color: green;
+    border: 0.2rem solid green;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: #fff;
+}
+.filter .filter-cho i
+{
+    color: green;
+}
+.filter .filter-box
+{
+    overflow: hidden;
+    border: .005rem solid hsla(240, 57%, 31%, 0.5);
+    border-radius: .5rem;
+    
+
+}
+.filter .filter-box .filter-box-header
+{
+    background: green;
+    padding: 1rem;
+    color: #fff;
+}
+.filter .filter-box .parent-tab
+{
+    background: rgba(153, 183, 238, 0.507);
+    color: #2b2b2b;
+    border-bottom: 0.005rem solid rgba(101, 121, 160, 0.288);
+}
+.filter .filter-box .parent-tab label
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.filter .filter-box .parent-tab .content
+{
+    display: none;
+    padding: 1rem;
+}
+.order-product
+{
+    flex: 1;
+
+}
+.order-product .order-criteria
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5rem 0;
+
+}
+.order-product .box-wrapper
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(13rem,1fr));
+    gap: 1.5rem;
+
+}
+.order-product .box-wrapper .box
+{
+    border: 0.1rem solid rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 0.5rem;
+
+}
+.order-product .box-wrapper .box .image img
+{
+    width: 100%;
+}
+.order-product .box-wrapper .box .book-name
+{
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.order-product .box-wrapper .box .book-info
+{
+    text-align: center;
+}
+.order-product .box-wrapper .box .book-price
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.order-product .box-wrapper .box .other-ref
+{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.order-product .box-wrapper .box .bottom-box
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+
+}
+.order-product .box-wrapper .box .bottom-box i
+{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.order-product .box-wrapper .box .bottom-box i:nth-of-type(2)
+{
+    color: red;
+}
+/*############ end category section ##############*/
 
 
 
@@ -289,22 +713,11 @@ a
 
 
 /* ######### media query ###################*/
-/* @media(max-width:567px)
-{
-    .container
-    {
-        width: 567px;
-    }
-} */
-@media(max-width:576px)
+@media(max-width:768px)
 {
     html
     {
         font-size: 50%;
-    }
-    .container
-    {
-       
     }
     .header .top-header
     {
@@ -326,16 +739,34 @@ a
     {
         display: inline-block;
     }
+    .category .category-cont
+    {
+        flex-direction: column;
+    }
+}
+@media(max-width:992px)
+{
     
+    html
+    {
+        font-size: 50%;
+    }
+}
+@media(min-width:576px)
+{
+    .container
+    {
+        width: 576px;
+    }
 }
 @media(min-width:768px)
 {
-  
+    
     .container
     {
         width: 720px;
+       
     }
-  
     
     
 }

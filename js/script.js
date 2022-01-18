@@ -1,48 +1,29 @@
-var swiper = new Swiper('.home-slider', {
-    // Optional parameters
-    spaceBetween:20,
-    centeredSlides:true,
-    autoplay:{
-        delay:7500,
-        disableOnInteraction:false,
-    },
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable:true,
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    loop:true,
-  
-  });
-  var swiper = new Swiper('.review-slider', {
-    // Optional parameters
-    spaceBetween:20,
-    centeredSlides:true,
-    autoplay:{
-        delay:7500,
-        disableOnInteraction:false,
-    },
-    loop:true,
-    breakpoints:{
-        0:{
-            slidesPerView:1,
-        },
-        640:{
-            slidesPerView:2,
-        },
-        768:{
-            slidesPerView:2,
-        },
-        1024:{
-            slidesPerView:3,
-        },
-    }
-  
-  });
+let login=document.getElementById("login");
+let modal_login=document.getElementById("modal-login");
+let close_login=document.getElementById("close-btn");
+let signin=document.getElementById("signin");
+let modal_signin=document.getElementById("modal-signin");
+let close_signin=document.getElementById("close-signin-btn");
+
+login.onclick=function () {
+    modal_signin.classList.remove("active");
+    modal_login.classList.add("active");
+}
+close_login.onclick=function () {
+    modal_login.classList.remove("active");
+    
+}
+
+signin.onclick=function () {
+    modal_login.classList.remove("active");
+    modal_signin.classList.add("active");
+}
+close_signin.onclick=function () {
+    modal_signin.classList.remove("active");
+    
+}
+window.onscroll=function () {
+    modal_login.classList.remove("active");
+    modal_signin.classList.remove("active");
+    
+}
