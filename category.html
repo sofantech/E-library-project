@@ -33,7 +33,7 @@
                     <li>
                         <div class="nav-item" href="#">
                             <i class="ri-star-fill"></i>
-                            <a class="home" href="">الرئيسية</a>
+                            <a class="home" href="home.html">الرئيسية</a>
                         </div>
                     </li>
                     <li>
@@ -89,10 +89,10 @@
                     <a href="#"><img src="images/logo.png"></a>
                 </div>
                 <form class="search-frm">
-                    <input type="search" placeholder="البحث">
+                    <input type="search" id="search-items" onkeyup="search()" placeholder="البحث">
                 </form>
                 <div class="basket">
-                    <i class="ri-shopping-basket-fill"></i>
+                    <i class="ri-shopping-cart-2-line"></i>
                 </div>
             </div>
         </div>
@@ -178,50 +178,65 @@
     
 
     <!--start slider section-->
-    <div class="slider container">
-        <ul>
-            <li>
-                <img src="images/slide-one.png">
-                <div class="content">
-                    <h2>نشرة العروض الترويجية</h2>
-                    <a class="btn">للإطلاع</a>
-                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
+    <div class="container">
+        <div class="slider">
+            <div class="form-ouer">
+                <ul>
+                    <li>
+                        <div class="content">
+                            <img src="images/learn.jfif">
+                            <div class="txt-ifon">
+                                <h2>نشرة العروض الترويجية</h2>
+                                <a class="btn">للإطلاع</a>
+                                <span>هذا العرض ساري من 29 نوفمبر حتى 22-2-22022</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <img src="images/light.jfif">
+                            <div class="txt-ifon">
+                                <h2>نشرة العروض الترويجية</h2>
+                                <a class="btn">للإطلاع</a>
+                                <span>هذا العرض ساري من 29 نوفمبر حتى 22-2-22022</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <img src="images/read-img.jfif">
+                            <div class="txt-ifon">
+                                <h2>نشرة العروض الترويجية</h2>
+                                <a class="btn">للإطلاع</a>
+                                <span>هذا العرض ساري من 29 نوفمبر حتى 22-2-22022</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="content">
+                            <img src="images/learn.jfif">
+                            <div class="txt-ifon">
+                                <h2>نشرة العروض الترويجية</h2>
+                                <a class="btn">للإطلاع</a>
+                                <span>هذا العرض ساري من 29 نوفمبر حتى 22-2-22022</span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+                <div class="arrow-right">
+                    <i class="ri-arrow-right-s-line"></i>
                 </div>
-            </li>
-            <li>
-                <img src="images/slide-two.png">
-                <div class="content">
-                    <h2>نشرة العروض الترويجية</h2>
-                    <a class="btn">للإطلاع</a>
-                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
+                <div class="arrow-left">
+                    <i class="ri-arrow-left-s-line"></i>
                 </div>
-            </li>
-            <li>
-                <img src="images/slide-three.png">
-                <div class="content">
-                    <h2>نشرة العروض الترويجية</h2>
-                    <a class="btn">للإطلاع</a>
-                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
-                </div>
-            </li>
-            <li>
-                <img src="images/slid-foure.png">
-                <div class="content">
-                    <h2>نشرة العروض الترويجية</h2>
-                    <a class="btn">للإطلاع</a>
-                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
-                </div>
-            </li>
-            <li>
-                <img src="images/slide-two.png">
-                <div class="content">
-                    <h2>نشرة العروض الترويجية</h2>
-                    <a class="btn">للإطلاع</a>
-                    <h5>هذا العرض ساري حتى 22-2-22022</h5>
-                </div>
-            </li>
-        </ul>
+    
+            </div>
+            
+        </div>
+
     </div>
+    
     
     <!--end slider section-->
 
@@ -319,17 +334,17 @@
                         <option>عدد مرات التحميل</option>
                     </select>
                 </div>
-                <div class="box-wrapper">
+                <div class="box-wrapper" id="box-wrapper">
                     <div class="box">
                         <div class="image">
-                            <img src="images/pic01.jpg">
+                            <img src="images/read-img.jfif">
                         </div>
                         <div class="book-info">
                             <div class="book-name">
-                                <h3>كتاب الكتروني</h3>
+                                <h3> كتاب الكتروني </h3>
                                 <i class="ri-book-read-line"></i>
                             </div>
-                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                            <span class="full-info">غدا اجمل (كتاب الكتروني)</span>
                         </div>
                         <div class="book-price">
                             <span class="price">49.9 رس</span>
@@ -346,14 +361,14 @@
                     </div>
                     <div class="box">
                         <div class="image">
-                            <img src="images/pic02.jpg">
+                            <img src="images/light.jfif">
                         </div>
                         <div class="book-info">
                             <div class="book-name">
-                                <h3>كتاب الكتروني</h3>
+                                <h3>كتاب إليكتروني</h3>
                                 <i class="ri-book-read-line"></i>
                             </div>
-                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                            <span class="full-info">اربعون (كتاب الكتروني)</span>
                         </div>
                         <div class="book-price">
                             <span class="price">49.9 رس</span>
@@ -370,14 +385,14 @@
                     </div>
                     <div class="box">
                         <div class="image">
-                            <img src="images/pic03.jpg">
+                            <img src="images/learn.jfif">
                         </div>
                         <div class="book-info">
                             <div class="book-name">
-                                <h3>كتاب الكتروني</h3>
+                                <h3>نسخة الكتروني</h3>
                                 <i class="ri-book-read-line"></i>
                             </div>
-                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
+                            <span class="full-info">الحضور التنفيذي (كتاب الكتروني)</span>
                         </div>
                         <div class="book-price">
                             <div class="price">49.9 رس</div>
@@ -394,7 +409,31 @@
                     </div>
                     <div class="box">
                         <div class="image">
-                            <img src="images/pic02.jpg">
+                            <img src="images/read-img.jfif">
+                        </div>
+                        <div class="book-info">
+                            <div class="book-name">
+                                <h3>كتاب الكتروني</h3>
+                                <i class="ri-book-read-line"></i>
+                            </div>
+                            <span class="full-info">عملية الحصول على العمل (كتاب الكتروني)</span>
+                        </div>
+                        <div class="book-price">
+                            <span class="price">49.9 رس</span>
+                            <span>شامل الضريبة</span>
+                        </div>
+                        <div class="other-ref">
+                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
+                        </div>
+                        <div class="bottom-box">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-shopping-cart-2-line"></i>
+                            <i class="ri-arrow-left-right-fill"></i>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="images/learn.jfif">
                         </div>
                         <div class="book-info">
                             <div class="book-name">
@@ -418,7 +457,7 @@
                     </div>
                     <div class="box">
                         <div class="image">
-                            <img src="images/pic03.jpg">
+                            <img src="images/read-img.jfif">
                         </div>
                         <div class="book-info">
                             <div class="book-name">
@@ -442,31 +481,7 @@
                     </div>
                     <div class="box">
                         <div class="image">
-                            <img src="images/pic01.jpg">
-                        </div>
-                        <div class="book-info">
-                            <div class="book-name">
-                                <h3>كتاب الكتروني</h3>
-                                <i class="ri-book-read-line"></i>
-                            </div>
-                            <span class="full-info">ابابيل (كتاب الكتروني)</span>
-                        </div>
-                        <div class="book-price">
-                            <span class="price">49.9 رس</span>
-                            <span>شامل الضريبة</span>
-                        </div>
-                        <div class="other-ref">
-                            <label>صيغ اخرى : <span>كتاب مطبوع</span></label>
-                        </div>
-                        <div class="bottom-box">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-shopping-cart-2-line"></i>
-                            <i class="ri-arrow-left-right-fill"></i>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="image">
-                            <img src="images/pic02.jpg">
+                            <img src="images/learn.jfif">
                         </div>
                         <div class="book-info">
                             <div class="book-name">

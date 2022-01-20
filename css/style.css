@@ -443,16 +443,45 @@ form .checkbox-sure
 /*############ start slider ##############*/
 .slider
 {
+    padding: 1rem 0;
+    position: relative;
+    background: linear-gradient(to right,#eee,#ada898),
+                linear-gradient(35deg,#eee,#effefe),
+                linear-gradient(90deg,#9A9483,#effefe);
+}
+.slider .form-ouer
+{
     width: 100%;
-    margin: auto;
     overflow: hidden;
-    padding: 1.5rem 0;
+    position: relative;
+}
+.arrow-right
+{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(-0%,-50%);
+
+}
+.arrow-left
+{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    
+}
+.arrow-right i,.arrow-left i
+{
+    font-size: 4rem;
+    color: #423F3E;
+
 }
 .slider ul
 {
-    padding: 0;
     width: 400%;
-    position: relative;
+    display: flex;
+    column-gap: 2rem;
     animation: slidin 10s ease-in-out infinite;
 }
 .slider ul:hover
@@ -462,8 +491,44 @@ form .checkbox-sure
 }
 .slider ul li
 {
-    float: left;
-    position: relative;
+    width: 100%;
+}
+.slider ul li .content
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.slider ul li .content img
+{
+
+}
+.slider ul li .content .txt-ifon
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.slider ul li .content .txt-ifon h2
+{
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(11, 11, 112, 0.801);
+}
+.slider ul li .content .txt-ifon a
+{
+    color: rgb(233, 20, 20);
+    background: rgba(230, 230, 14, 0.979);
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 1rem 2rem;
+}
+.slider ul li .content .txt-ifon span
+{
+    font-size: 1.7rem;
+
 }
 .slider h5
 {
@@ -480,23 +545,23 @@ form .checkbox-sure
 {
     5%,10%
     {
-        right: 0;
+        right: -100%;
     }
     15%,30%
     {
-        right: -100%;
+        margin-right: -100%;
     }
     35%,50%
     {
-        right: -200%;
+        margin-right: -200%;
     }
     55%,70%
     {
-        right: -300%;
+        margin-right: -300%;
     }
     75%,90%
     {
-        right: -400%;
+        margin-right: -400%;
     }
 }
 
@@ -588,7 +653,7 @@ form .checkbox-sure
 .order-product .order-criteria
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 1.5rem 0;
 
@@ -605,11 +670,30 @@ form .checkbox-sure
     border: 0.1rem solid rgba(0, 0, 0, 0.5);
     overflow: hidden;
     border-radius: 0.5rem;
+    position: relative;
 
+}
+.order-product .box-wrapper .box .image
+{
+    height: 130px;
+    position: relative;
+}
+.order-product .box-wrapper .box .timer 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: rgb(116, 104, 104);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
 }
 .order-product .box-wrapper .box .image img
 {
     width: 100%;
+    height: 100%;
 }
 .order-product .box-wrapper .box .book-name
 {
@@ -639,7 +723,7 @@ form .checkbox-sure
 {
     display: flex;
     justify-content: space-between;
-    padding: 2.5rem;
+    padding: 1.5rem;
 
 }
 .order-product .box-wrapper .box .bottom-box i
@@ -652,6 +736,127 @@ form .checkbox-sure
     color: red;
 }
 /*############ end category section ##############*/
+
+
+/*############ start order by category section ##############*/
+.order-by-category
+{
+    width: 100%;
+    position: relative;
+}
+.order-by-category .arrow-right
+{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    cursor: pointer;
+
+}
+.order-by-category .arrow-left
+{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%,-50%);
+    cursor: pointer;
+    
+}
+.order-by-category .form-outer
+{
+    width: 100%;
+    overflow: hidden;
+    
+}
+.order-by-category ul
+{
+    width: 200%;
+    display: flex;
+}
+.order-by-category ul li
+{
+    width: 25%;
+    margin: 2rem 0.5rem;
+    background: #eee;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+.cat-logo
+{
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    background: red;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+}
+.order-by-category li h3
+{
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: red;
+}
+li:nth-child(2) .cat-logo
+{
+    background: rgb(226, 130, 5);
+
+}
+li:nth-child(2) h3
+{
+    color: rgb(226, 130, 5);
+    font-size: 2rem;
+}
+li:nth-child(3) .cat-logo
+{
+    background: rgb(79, 101, 223);
+
+}
+li:nth-child(3) h3
+{
+    color: rgb(79, 101, 223);
+    font-size: 2rem;
+}
+li:nth-child(4) .cat-logo
+{
+    background: rgba(241, 146, 67, 0.829);
+
+}
+li:nth-child(4) h3
+{
+    color: rgba(241, 146, 67, 0.829);
+    font-size: 2rem;
+}
+li:nth-child(5) .cat-logo
+{
+    background: rgba(110, 36, 7, 0.829);
+
+}
+li:nth-child(5) h3
+{
+    color: rgba(110, 36, 7, 0.829);
+    font-size: 2rem;
+}
+li:nth-child(6) .cat-logo
+{
+    background: rgba(201, 46, 92, 0.918);
+
+}
+li:nth-child(6) h3
+{
+    color: rgba(201, 46, 92, 0.918);
+    font-size: 2rem;
+}
+.cat-logo i
+{
+    color: #fff;
+    font-size: 1.7rem;
+}
+/*############ end order by category section ##############*/
 
 
 
