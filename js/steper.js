@@ -13,7 +13,7 @@ let current = 1;
 
 nextBtnFirst.addEventListener("click", function(event){
   event.preventDefault();
-  slidePage.style.marginLeft = "-25%";
+  slidePage.style.marginRight = "-33.33%";
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
@@ -21,7 +21,7 @@ nextBtnFirst.addEventListener("click", function(event){
 });
 nextBtnSec.addEventListener("click", function(event){
   event.preventDefault();
-  slidePage.style.marginLeft = "-50%";
+  slidePage.style.marginRight = "-66.66%";
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
@@ -29,26 +29,18 @@ nextBtnSec.addEventListener("click", function(event){
 });
 nextBtnThird.addEventListener("click", function(event){
   event.preventDefault();
-  slidePage.style.marginLeft = "-75%";
+  slidePage.style.marginRight = "-99.99%";
   bullet[current - 1].classList.add("active");
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
+  alert("تمت العملية بنجاح");
+  location.href="http://127.0.0.1:5503/E-library-project/home.html";
   current += 1;
-});
-submitBtn.addEventListener("click", function(){
-  bullet[current - 1].classList.add("active");
-  progressCheck[current - 1].classList.add("active");
-  progressText[current - 1].classList.add("active");
-  current += 1;
-  setTimeout(function(){
-    alert("Successful Purchase");
-    location.reload();
-  },800);
 });
 
 prevBtnSec.addEventListener("click", function(event){
   event.preventDefault();
-  slidePage.style.marginLeft = "0%";
+  slidePage.style.marginRight = "0%";
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
@@ -56,7 +48,7 @@ prevBtnSec.addEventListener("click", function(event){
 });
 prevBtnThird.addEventListener("click", function(event){
   event.preventDefault();
-  slidePage.style.marginLeft = "-25%";
+  slidePage.style.marginRight = "-33.33%";
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
@@ -64,9 +56,17 @@ prevBtnThird.addEventListener("click", function(event){
 });
 prevBtnFourth.addEventListener("click", function(event){
   event.preventDefault();
-  slidePage.style.marginLeft = "-50%";
+  slidePage.style.marginRight = "-66.66%";
   bullet[current - 2].classList.remove("active");
   progressCheck[current - 2].classList.remove("active");
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
+let sentence="I Love Fooood Tod Playing Much";
+let sentencefilter=sentence.split(" ").filter(function (e) {
+  return e.length<=4?true:false;
+  
+});
+
+
+

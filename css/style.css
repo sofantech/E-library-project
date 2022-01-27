@@ -80,12 +80,17 @@ a
     background: var(--top-bar-bk);
     width: 100%;
     border-bottom: 0.05rem solid #2424242a;
+    position: relative;
 }
 .header .top-header ul
 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.header .top-header ul.active
+{
+    transform: translatex(0vw);
 }
 .header .top-header ul li
 {
@@ -168,11 +173,28 @@ a
     line-height: 4rem;
     text-align: center;
     border-radius: 50%;
+    position: relative;
+    cursor: pointer;
 }
 .header .main-header .basket i
 {
     
 }
+.header .main-header .basket .conter
+{
+    position: absolute;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    top: -2px;
+    left: -10px;
+    background: #000;
+    color: #fff;
+    line-height: 2rem;
+    border-radius: 50%;
+
+}
+
 /* start login modale*/
 
 .modal-login,
@@ -189,7 +211,7 @@ a
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.6);
-    z-index: 1000;
+    z-index: 2500;
     display: none;
 }
 .modal-login.active
@@ -232,13 +254,15 @@ a
     background: transparent;
 
 }
-.modal-content form input[type="submit"]
+.modal-login .modal-content form input[type="submit"]
 {
     width: 100%;
-    background: red;
+    background: rgb(243, 43, 43);
     color: white;
     padding: 1.5rem;
     border-radius: 0.5rem;
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
 
 
 }
@@ -261,18 +285,20 @@ a
 .close-btn
 {
     position: relative;
-    right: 15%;
-    top: 20%;
+    right: 5%;
+    top: 5%;
     width: 40px;
     height: 40px;
-    background: #fff;
+    background: #ccc;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 .close-btn i
 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    color: #2b2b2b;
 
 }
 /* end login modale*/
@@ -294,7 +320,7 @@ a
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.6);
-    z-index: 1000;
+    z-index: 2500;
     display: none;
 }
 .modal-signin.active
@@ -303,7 +329,7 @@ a
 }
 .modal-content
 {
-    width: 380px;
+    max-width: 90%;
     height: 630px;
     padding: 1.8rem;
     border-radius: 5px;
@@ -390,6 +416,7 @@ a
     padding: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
+    font-size: 1.7rem;
 
 
 }
@@ -423,18 +450,20 @@ form .checkbox-sure
 .close-signin-btn
 {
     position: relative;
-    right: 10%;
+    right: 5%;
     top: 5%;
     width: 40px;
     height: 40px;
-    background: #fff;
+    background: #ccc;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 .close-signin-btn i
 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    color: #2b2b2b;
 
 }
 /* end signin modale*/
@@ -461,6 +490,7 @@ form .checkbox-sure
     right: 0%;
     top: 50%;
     transform: translate(-0%,-50%);
+    cursor: pointer;
 
 }
 .arrow-left
@@ -469,6 +499,7 @@ form .checkbox-sure
     left: 0%;
     top: 50%;
     transform: translate(0%,-50%);
+    cursor: pointer;
     
 }
 .arrow-right i,.arrow-left i
@@ -582,7 +613,7 @@ form .checkbox-sure
 }
 .category .filter
 {
-    flex: 1;
+    flex-basis: 30%;
 
 }
 .category .filter ul
@@ -622,33 +653,117 @@ form .checkbox-sure
     
 
 }
+.filter-box span,
+.filter-box i,
+.filter-box label
+{
+    font-size: 1.7rem;
+}
 .filter .filter-box .filter-box-header
 {
     background: green;
     padding: 1rem;
     color: #fff;
+    font-size: 2rem;
 }
 .filter .filter-box .parent-tab
 {
-    background: rgba(153, 183, 238, 0.507);
-    color: #2b2b2b;
-    border-bottom: 0.005rem solid rgba(101, 121, 160, 0.288);
+    
 }
 .filter .filter-box .parent-tab label
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
+    background: rgba(153, 183, 238, 0.507);
+    color: #2b2b2b;
+    border-bottom: 0.005rem solid rgba(101, 121, 160, 0.288);
 }
 .filter .filter-box .parent-tab .content
 {
     display: none;
     padding: 1rem;
 }
+.price-content
+{
+    padding: 3rem 1rem 1rem 1rem;
+
+}
+.price-content.hidden
+{
+    display: none;
+}
+.price-content .prise-range
+{
+    padding: 0 2rem;
+
+}
+.price-content .prise-range span
+{
+    display: inline-block;
+    height: 1.2rem;
+    width: 100%;
+    background:#9A9483;
+    position: relative;
+
+}
+.price-content .prise-range span::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background: red;
+    width: 2rem;
+    height: 2rem;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+}
+.price-content .prise-range span::after
+{
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    background: red;
+    width: 2rem;
+    height: 2rem;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+}
+.price-content .prise-values
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.price-content .prise-values span
+{
+    font-size: 1.7rem;
+    color: rgb(116, 104, 104);
+
+}
 .order-product
 {
     flex: 1;
 
+}
+.order-product .show-more
+{
+    width: 100%;
+    padding: 1rem;
+    color: #fff;
+    background: rgba(37, 84, 146, 0.788);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+.order-product .show-more:hover
+{
+    background: rgb(30, 92, 172);
 }
 .order-product .order-criteria
 {
@@ -723,6 +838,7 @@ form .checkbox-sure
 {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.5rem;
 
 }
@@ -730,10 +846,35 @@ form .checkbox-sure
 {
     font-size: 2rem;
     font-weight: 600;
+    cursor: pointer;
 }
-.order-product .box-wrapper .box .bottom-box i:nth-of-type(2)
+.order-product .box-wrapper .box .bottom-box .shopping-basket
 {
-    color: red;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    text-align: center;
+    background: rgb(230, 21, 21);
+    cursor: pointer;
+}
+.order-product .box-wrapper .box .bottom-box .shopping-basket i
+{
+    color: #fff;
+    font-size: 2.2rem;
+}
+.footer-category
+{
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 15px;
+    margin: 10px -10px 0;
+    border-top: 10px solid #f1f1f1;
+}
+.footer-category h1
+{
+    color: green;
+    font-size: 1.7rem;
 }
 /*############ end category section ##############*/
 
@@ -784,6 +925,7 @@ form .checkbox-sure
     align-items: center;
     justify-content: center;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 .cat-logo
 {
@@ -859,14 +1001,294 @@ li:nth-child(6) h3
 /*############ end order by category section ##############*/
 
 
+/*############ start details section ##############*/
+.detail
+{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+.detail .top-bar
+{
+
+}
+.detail .top-bar ul
+{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+.detail .top-bar ul a
+{
+    color: blue;
+}
+.detail .top-bar ul span
+{
+    color: #423F3E;
+}
+.detail .book-info
+{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+}
+.book-info .book-image-box
+{
+    max-width: 400px;
+    background: #eee;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    flex-basis: calc(100% / 3);
+}
+.book-image-box .bg-image
+{
+    width: 60%;
+}
+.book-image-box .bg-image img
+{
+    width: 100%;
+}
+.book-image-box .sm-image
+{
+    width: 15%;
+    padding: 1rem 1rem;
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+.book-image-box .sm-image img
+{
+    width: 100%;
+}
+.detail .book-detail-box
+{
+    flex-basis: calc(100% / 3);
+
+}
+.detail .book-detail-box h2
+{
+    font-size: 2.2rem;
+}
+.detail .book-detail-box .show-more
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.detail .book-detail-box .show-more a,
+.detail .book-detail-box .show-more i
+{
+    font-size: 1.7rem;
+    color: blue;
+
+}
+.detail .prise-box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.detail .prise-box .prise
+{
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.detail .prise-box .tax
+{
+    font-size: 1.2rem;
+    color: #423f3e7a;
+    width: 100%;
+    line-height: 1;
+}
+.detail .rate
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.detail .rate .star
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.detail .rate .star i
+{
+    color: #d8d81df7;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+.detail .rate .product-info
+{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+    flex-direction: row-reverse;
+}
+.detail .available-format
+{
+
+}
+.detail .available-format h5
+{
+    font-size: 1.7rem;
+    color: var(--link-color);
+}
+.detail .available-format .electro-book,
+.detail .available-format .print-book
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+.add-to-basket-box
+{
+    flex-basis: calc(100% / 3);
+    padding: 1rem 1.5rem;
+    background: #eee;
+}
+.add-to-basket-box .note
+{
+    background: rgb(245, 245, 160);
+    color: #262626;
+    text-align: right;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    border-inline-start: 5px solid rgb(158, 158, 8);
+    margin-bottom: 1rem;
+}
+.add-to-basket-box .note .not
+{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.add-to-basket-box .note .read-more
+{
+    color: blue;
+}
+.detail .basket-btn
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.detail .basket-btn button
+{
+    flex-basis: 80%;
+    background: red;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+}
+.detail .basket-btn select
+{
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.detail .more-info 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+.detail .more-info .one,
+.detail .more-info .two,
+.detail .more-info .three
+{
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+}
+.book-description
+{
+    background: #eee;
+    padding: 2rem;
+    border: 0.05rem solid #9e9e9e;
+}
+.specification-box
+{
+    margin: 3rem 0;
+    border-bottom: 0.1rem solid #9e9e9e;
+    padding: 1rem 0;
+    border-radius: 1rem;
+}
+.specification-header
+{
+    font-size: 1.7rem;
+}
+.specification-box div
+{
+    padding: 1rem;
+    border-bottom: 0.05rem solid #9e9e9e;
+    display: flex;
+    gap: 10rem;
+}
+.customer-btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15, 15, 207, 0.842);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    column-gap: 1rem;
+    cursor: pointer;
+}
+.customer-btn i
+{
+    color: #fff;
+}
+.customer-reviews-header
+{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+}
 
 
 
-/*############ start footer ##############*/
+
+/*############ end details section ##############*/
+
+/*############ start checkout section ##############*/
+
+
 .footer
 {
-    padding: 2rem 0;
+    background: rgb(238, 230, 201);
+    
+    
+}
+.footer .footer-links
+{
     background: var(--icon-color);
+    padding: 2rem 0;
+
 }
 .footer h3
 {
@@ -913,6 +1335,28 @@ li:nth-child(6) h3
     color: #ada898;
     font-size: 1.2rem;
 }
+.bottom-footer
+{
+    padding: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .bottom-footer span
+{
+    font-size: 1.5rem;
+
+}
+.footer .visa-section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+}
 
 /*############ end footer ##############*/
 
@@ -924,9 +1368,22 @@ li:nth-child(6) h3
     {
         font-size: 50%;
     }
-    .header .top-header
+    .header .top-header ul
     {
-        display: none;
+        height: 100vh;
+        width: 70vw;
+        position: absolute;
+        top: 79px;
+        right: 0;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: right;
+        align-items: inherit;
+        flex-direction: column;
+        padding: 2.5rem;
+        z-index: 2000;
+        background: #eee;
+        transform: translatex(70vw);
     }
     .header .main-header .togle-menu i
     {

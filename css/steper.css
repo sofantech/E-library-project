@@ -15,7 +15,7 @@ body{
   font-family: 'Cairo', sans-serif;
 }
 .container{
-  width: 330px;
+  width: 630px;
   background: #fff;
   text-align: center;
   border-radius: 5px;
@@ -32,19 +32,19 @@ body{
 }
 .container .form-outer form{
   display: flex;
-  width: 400%;
+  width: 300%;
 }
 .form-outer form .page{
-  width: 25%;
-  transition: margin-left 0.3s ease-in-out;
+  width: 33.33%;
+  transition: margin-right 0.3s ease-in-out;
 }
 .form-outer form .page .title{
-  text-align: left;
+  text-align: right;
   font-size: 25px;
   font-weight: 500;
 }
 .form-outer form .page .field{
-  width: 330px;
+  width: 630px;
   height: 35px;
   margin: 35px 0;
   display: flex;
@@ -60,12 +60,12 @@ form .page .field input{
   width: 100%;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  padding-left: 15px;
+  padding-right: 15px;
   font-size: 18px;
 }
 form .page .field select{
   width: 100%;
-  padding-left: 10px;
+  padding-right: 10px;
   font-size: 17px;
   font-weight: 500;
 }
@@ -91,11 +91,11 @@ form .page .btns button{
   margin-top: -20px!important;
 }
 form .page .btns button.prev{
-  margin-right: 3px;
+  margin-left: 3px;
   font-size: 17px;
 }
 form .page .btns button.next{
-  margin-left: 3px;
+  margin-right: 3px;
 }
 .container .progress-bar{
   display: flex;
@@ -142,7 +142,7 @@ form .page .btns button.next{
   position: absolute;
   content: '';
   bottom: 11px;
-  right: -51px;
+  left: -51px;
   height: 3px;
   width: 44px;
   background: #262626;
@@ -178,3 +178,183 @@ form .page .btns button.next{
   display: block;
   color: #fff;
 }
+.basket-title
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.basket-container 
+{
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 20rem;
+  overflow: auto;
+  
+  
+}
+.basket-container::-webkit-scrollbar
+{
+  width: 0px;
+  
+  
+}
+.basket-container .box
+{
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: .1rem solid #26262667;
+}
+.basket-container .box .top-card
+{
+  display: flex;
+  gap: 1rem;
+  border-block-end: 1px solid #e0e0e0;
+  padding: 0rem 0 1rem 0;
+  
+}
+.basket-container .box .image
+{
+  max-width: 4rem;
+  
+}
+.basket-container .box .image img
+{
+  width: 100%;
+}
+.basket-container .box .content
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.basket-container .box .content h2
+{
+  font-size: 2rem;
+  font-weight: 400;
+  color: #262626;
+  line-height: 1.2;
+}
+.basket-container .box .content p
+{
+  font-size: 1.2rem;
+  color: #5c5b5b;
+}
+.basket-container .box .content .notes
+{
+  background: rgb(245, 245, 160);
+  color: #262626;
+  text-align: right;
+  padding: 0rem 1rem;
+  border-radius: 0.3rem;
+  border-inline-start: 5px solid yellow;
+}
+.basket-container .box .content .notes span.note
+{
+  font-weight: bold;
+}
+.basket-container .box .content .notes span.txt
+{
+  color: rgb(119, 116, 116);
+
+}
+a
+{
+  text-decoration: none;
+}
+.box .count
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.count .counter
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.count .counter input
+{
+  height: 50%;
+  width: 20%;
+  padding: 0.3rem 0;
+}
+.count .control-btn
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.delete-btn
+{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.basket-total
+{
+  width: 100%;
+  direction: rtl;
+}
+.free
+{
+  color: green;
+}
+.total-sum,
+.prise-total
+{
+  color: red;
+}
+.basket-total .info-txt
+{
+  border: 0.05rem solid #5c5b5bcc;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+.basket-total .info-txt .sum,
+.basket-total .info-txt .shahn,
+.basket-total .info-txt .all-sum
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.basket-total .update-basket
+{
+  width: 100%;
+  padding: 0.5rem;
+  background: red;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+/*############ end checkout section ##############*/
+.checkout
+{
+    padding-bottom: 4rem;
+    
+}
+.checkout .form-outer .page .basket-container
+{
+   
+    margin-bottom: 1rem;
+
+}
+.basket-container .box .content h2
+{
+  font-size: 1.7rem;
+}
+.basket-container .box .content p
+{
+  font-size: 1rem;
+}
+
+/*############ start footer ##############*/
