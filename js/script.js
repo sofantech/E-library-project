@@ -17,7 +17,7 @@ let categoryList=document.querySelectorAll("#category-list .category-box");
 console.log(categoryList);
 categoryList.forEach((e)=>{
     e.onclick=function () {
-        location.href="http://127.0.0.1:5503/E-library-project/category.html";
+        location.href="https://sofantech.github.io/E-library-project/category.html";
         
     }
 
@@ -92,7 +92,7 @@ iconshoping.innerHTML=no;
 //click on basket btn
 let basketBtn=document.querySelector('.basket');
 basketBtn.addEventListener("click",()=>{
-    location.href="http://127.0.0.1:5503/E-library-project/checkout.html";
+    location.href="https://sofantech.github.io/E-library-project/checkout.html";
 });
 
 //adding data to cart
