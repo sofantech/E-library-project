@@ -13,14 +13,18 @@ let prise_box=document.querySelector("#price-content");
 let show_prise_btn=document.querySelector("#show-prise");
 let togle_menu=document.querySelector(".header #togle-menu");
 let menu_list=document.querySelector(".header .top-header #menu_list");
+let boxList=document.querySelectorAll(".box-wrapper .box");
 let categoryList=document.querySelectorAll("#category-list .category-box");
 console.log(categoryList);
 categoryList.forEach((e)=>{
     e.onclick=function () {
-        location.href="https://sofantech.github.io/E-library-project/category.html";
-        
+        location.href="https://sofantech.github.io/E-library-project/category.html";   
     }
-
+});
+boxList.forEach((e)=>{
+    e.onclick=function () {
+        location.href="https://sofantech.github.io/E-library-project/details.html";
+    }
 })
 togle_menu.onclick=function () {
     menu_list.classList.toggle("active");
