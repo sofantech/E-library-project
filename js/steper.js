@@ -34,7 +34,7 @@ nextBtnThird.addEventListener("click", function(event){
   progressCheck[current - 1].classList.add("active");
   progressText[current - 1].classList.add("active");
   alert("تمت العملية بنجاح");
-  location.href="http://127.0.0.1:5503/E-library-project/home.html";
+  location.href="https://sofantech.github.io/E-library-project/home.html";
   current += 1;
 });
 

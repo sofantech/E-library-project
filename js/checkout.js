@@ -1,7 +1,7 @@
 const slidePage = document.querySelector(".slide-page");
 let update_basket=document.getElementById(`update-basket`);
 update_basket.addEventListener("click",()=>{
-  location.href="http://127.0.0.1:5503/E-library-project/steper.html";
+  location.href="https://sofantech.github.io/E-library-project/steper.html";
 });
 window.onload=function () {
   const cartboxlist=document.getElementById("basket-list");
